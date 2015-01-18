@@ -1,0 +1,18 @@
+
+####  ignore object files ####
+buildFiles/Link/
+"buildFiles/VisualStudio 2010/ipch/"
+game/indieMotion*
+game/shaders/procedural/
+game/core/fonts/
+game/core/prefs.cs
+game/tools/settings.xml
+*.log
+*.db
+*.user
+*.sdf
+*.opensdf
+*.suo
+*.ipch
+*~
+

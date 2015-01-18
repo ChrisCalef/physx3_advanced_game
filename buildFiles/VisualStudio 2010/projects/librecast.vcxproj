@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Library Project Template -->
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Optimized Debug|Win32">
+      <Configuration>Optimized Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F2C0209B-1B90-4F73-816A-A0920FF8B107}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="Torque.Cpp.$(Platform).user.props" Condition="exists('Torque.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Optimized Debug|Win32'" Label="PropertySheets">
+    <Import Project="Torque.Cpp.$(Platform).user.props" Condition="exists('Torque.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="Torque.Cpp.$(Platform).user.props" Condition="exists('Torque.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/T3D/Torque3D/Engine/lib//compiled/$(Configuration).$(Platform)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../Link/VC2010.$(Configuration).$(PlatformName)/$(ProjectName)/</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">librecast_DEBUG</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Optimized Debug|Win32'">F:/T3D/Torque3D/Engine/lib//compiled/$(Configuration).$(Platform)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Optimized Debug|Win32'">../../Link/VC2010.$(Configuration).$(PlatformName)/$(ProjectName)/</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Optimized Debug|Win32'">librecast_OPTIMIZEDDEBUG</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/T3D/Torque3D/Engine/lib//compiled/$(Configuration).$(Platform)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../Link/VC2010.$(Configuration).$(PlatformName)/$(ProjectName)/</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">librecast</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>F:/T3D/Torque3D/Engine/lib/recast/DebugUtils/Include;F:/T3D/Torque3D/Engine/lib/recast/Recast/Include;F:/T3D/Torque3D/Engine/lib/recast/Detour/Include;F:/T3D/Torque3D/Engine/lib/recast/DetourTileCache/Include;F:/T3D/Torque3D/Engine/lib/recast/DetourCrowd/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TORQUE_DEBUG;TORQUE_DEBUG_GUARD;D3D_DEBUG_INFO;TORQUE_NET_STATS;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName)_DEBUG.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName)_DEBUG.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4244;4305;4530;4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>      
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)librecast_DEBUG.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Optimized Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>F:/T3D/Torque3D/Engine/lib/recast/DebugUtils/Include;F:/T3D/Torque3D/Engine/lib/recast/Recast/Include;F:/T3D/Torque3D/Engine/lib/recast/Detour/Include;F:/T3D/Torque3D/Engine/lib/recast/DetourTileCache/Include;F:/T3D/Torque3D/Engine/lib/recast/DetourCrowd/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TORQUE_DEBUG;TORQUE_DEBUG_GUARD;D3D_DEBUG_INFO;TORQUE_NET_STATS;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName)_OPTIMIZEDDEBUG.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName)_OPTIMIZEDDEBUG.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4244;4305;4530;4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)librecast_OPTIMIZEDDEBUG.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>F:/T3D/Torque3D/Engine/lib/recast/DebugUtils/Include;F:/T3D/Torque3D/Engine/lib/recast/Recast/Include;F:/T3D/Torque3D/Engine/lib/recast/Detour/Include;F:/T3D/Torque3D/Engine/lib/recast/DetourTileCache/Include;F:/T3D/Torque3D/Engine/lib/recast/DetourCrowd/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4244;4305;4530;4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)/librecast.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+
+               
+               
+               
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DebugUtils\Source\DebugDraw.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DebugUtils\Source\DetourDebugDraw.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DebugUtils\Source\RecastDebugDraw.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DebugUtils\Source\RecastDump.cpp" />      
+				         
+				      
+   
+      
+      
+               
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Detour\Source\DetourAlloc.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Detour\Source\DetourCommon.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Detour\Source\DetourNavMesh.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Detour\Source\DetourNavMeshBuilder.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Detour\Source\DetourNavMeshQuery.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Detour\Source\DetourNode.cpp" />      
+				         
+				      
+   
+      
+      
+               
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DetourCrowd\Source\DetourCrowd.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DetourCrowd\Source\DetourLocalBoundary.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DetourCrowd\Source\DetourObstacleAvoidance.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DetourCrowd\Source\DetourPathCorridor.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DetourCrowd\Source\DetourPathQueue.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DetourCrowd\Source\DetourProximityGrid.cpp" />      
+				         
+				      
+   
+      
+      
+               
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DetourTileCache\Source\DetourTileCache.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\DetourTileCache\Source\DetourTileCacheBuilder.cpp" />      
+				         
+				      
+   
+      
+      
+               
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\Recast.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastAlloc.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastArea.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastContour.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastFilter.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastLayers.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastMesh.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastMeshDetail.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastRasterization.cpp" />      
+				         
+				      
+   
+      
+               				                     <ClCompile Include="F:\T3D\Torque3D\Engine\lib\recast\Recast\Source\RecastRegion.cpp" />      
+				         
+				      
+   
+      
+      
+      
+  </ItemGroup>
+  <ItemGroup>
+    </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
