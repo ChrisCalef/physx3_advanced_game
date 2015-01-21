@@ -78,35 +78,44 @@ new SimGroup(MissionGroup) {
       Material = "BlankWhite";
          Enabled = "1";
    };
+
+};
+//--- OBJECT WRITE END ---
+/*
    new SimGroup(Cubes) {
-canSave = "1";
-canSaveDynamicFields = "1";
-new PhysicsShape() {
-playAmbient = "0";
-dataBlock = "PSCube";
-position = "-9.81174 4.05932 11.0609";
-rotation = "0.561179 0.514223 0.648577 109.419";
-canSave = "1";
-canSaveDynamicFields = "1";
-areaImpulse = "0";
-damageRadius = "0";
-invulnerable = "0";
-minDamageAmount = "0";
-radiusDamage = "0";
-};
-new PhysicsShape() {
-playAmbient = "0";
-dataBlock = "PSCube";
-position = "0 2.83897 1.01191";
-rotation = "1 0 0 0";
-canSave = "1";
-canSaveDynamicFields = "1";
-areaImpulse = "0";
-damageRadius = "0";
-invulnerable = "0";
-minDamageAmount = "0";
-radiusDamage = "0";
-};
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      
+   };
+      new PhysicsShape(Box_A) {
+         playAmbient = "0";
+         dataBlock = "PSCube";
+         position = "0 2 4";
+         rotation = "1 0 0 0";
+         canSave = "1";
+         canSaveDynamicFields = "1";
+         areaImpulse = "0";
+         damageRadius = "0";
+         invulnerable = "0";
+         minDamageAmount = "0";
+         radiusDamage = "0";
+         hasGravity = false;
+      };
+      new PhysicsShape(Box_B) {
+         playAmbient = "0";
+         dataBlock = "PSCube";
+         position = "2 2 4";
+         rotation = "1 0 0 0";
+         canSave = "1";
+         canSaveDynamicFields = "1";
+         areaImpulse = "0";
+         damageRadius = "0";
+         invulnerable = "0";
+         minDamageAmount = "0";
+         radiusDamage = "0";
+         hasGravity = false;
+      };
+
 new PhysicsShape() {
 playAmbient = "0";
 dataBlock = "PSCube";
@@ -562,7 +571,4 @@ invulnerable = "0";
 minDamageAmount = "0";
 radiusDamage = "0";
 };
-};
-};
-//--- OBJECT WRITE END ---
-
+*/

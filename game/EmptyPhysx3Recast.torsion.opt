@@ -1,0 +1,16 @@
+<TorsionProjectOptions>
+<Address>127.0.0.1</Address>
+<Password>password</Password>
+<Port>6060</Port>
+<LastConfig>Debug</LastConfig>
+<Breakpoints/>
+<Bookmarks/>
+<OpenFiles>
+<File ScrollX="0" ScrollY="66">levels\Empty Room.mis</File>
+<File ScrollX="0" ScrollY="0">art\datablocks\datablockExec.cs</File>
+<File ScrollX="0" ScrollY="13">art\datablocks\physicsShape.cs</File>
+<File ScrollX="0" ScrollY="30">main.cs</File>
+<File ScrollX="0" ScrollY="51">art\shapes\physx3\materials.cs</File>
+<File ScrollX="0" ScrollY="356" Active="true">scripts\server\game.cs</File>
+</OpenFiles>
+</TorsionProjectOptions>

@@ -219,7 +219,20 @@
     <ResourceCompile Include="Torque.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Engine\source\console\sqlite3.c" />
+    <ClCompile Include="..\..\..\..\..\Engine\source\console\SQLiteObject.cc" />
+    <ClCompile Include="..\..\..\..\..\Engine\source\T3D\physics\physicsArticulatedShape.cpp" />
+    <ClCompile Include="..\..\..\..\..\Engine\source\T3D\physics\physicsJoint.cpp" />
+    <ClCompile Include="..\..\..\..\..\Engine\source\T3D\physics\physx3\px3ArticulatedShape.cpp" />
+    <ClCompile Include="..\..\..\..\..\Engine\source\T3D\physics\physx3\px3Joint.cpp" />
     <ClCompile Include="F:\T3D\Torque3D\Engine\source\T3D\accumulationVolume.cpp" />
+    <ClInclude Include="..\..\..\..\..\Engine\source\console\sqlite3.h" />
+    <ClInclude Include="..\..\..\..\..\Engine\source\console\sqlite3ext.h" />
+    <ClInclude Include="..\..\..\..\..\Engine\source\console\SQLiteObject.h" />
+    <ClInclude Include="..\..\..\..\..\Engine\source\T3D\physics\physicsArticulatedShape.h" />
+    <ClInclude Include="..\..\..\..\..\Engine\source\T3D\physics\physicsJoint.h" />
+    <ClInclude Include="..\..\..\..\..\Engine\source\T3D\physics\physx3\px3ArticulatedShape.h" />
+    <ClInclude Include="..\..\..\..\..\Engine\source\T3D\physics\physx3\px3Joint.h" />
     <ClInclude Include="F:\T3D\Torque3D\Engine\source\T3D\accumulationVolume.h" />
     <ClCompile Include="F:\T3D\Torque3D\Engine\source\T3D\aiClient.cpp" />
     <ClInclude Include="F:\T3D\Torque3D\Engine\source\T3D\aiClient.h" />

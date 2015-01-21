@@ -232,3 +232,307 @@ function endGame()
    resetMission();
    $Game::Running = false;
 }
+
+
+
+
+
+//-----------------------------------------------------------------------------
+// Physics Experimentation
+//-----------------------------------------------------------------------------
+function looseBoxes(%start)
+{
+   if (VectorLen(%start)==0.0)
+      %start = "0 0 9";
+      
+   %b = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 0 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   %b = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 2 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   }; 
+   %b = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 4 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   }; 
+   %b = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 6 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   }; 
+   %b = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 8 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   }; 
+   %b = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 10 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   }; 
+}
+
+function makeBoxes(%start)
+{
+   if (VectorLen(%start)==0.0)
+      %start = "0 0 3";
+      
+   //%jointID = 1;
+   %a = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"0 0 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = false;
+      isDynamic = false;
+   };   
+   $sphericalB = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 0 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   %a.jointAttach($sphericalB,4);//4 = spherical 
+   ///////////////////////////////////////////////
+   %a = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"0 2 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = false;
+      isDynamic = false;
+   };   
+   $revoluteB = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 2 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   %a.jointAttach($revoluteB,5);//REVOLUTE 5
+   ///////////////////////////////////////////////   
+   %a = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position =  VectorAdd(%start,"0 4 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = false;
+      isDynamic = false;
+   };   
+   $prismaticB = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 4 1");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   %a.jointAttach($prismaticB,6);//PRISMATIC 6
+   ///////////////////////////////////////////////   
+   %a = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"0 6 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = false;
+      isDynamic = false;
+   };   
+   $fixedB = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 6 -0.2");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   %a.jointAttach($fixedB,7);//FIXED 7
+   ///////////////////////////////////////////////   
+   %a = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"0 8 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = false;
+      isDynamic = false;
+   };   
+   $distanceB = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 8 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   %a.jointAttach($distanceB,8);//DISTANCE 8
+   ///////////////////////////////////////////////   
+   $d6A = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"0 10 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = false;
+      isDynamic = false;
+   };   
+   $d6B = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = VectorAdd(%start,"3 10 0");
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   $d6A.jointAttach($d6B,1);//D6 1
+}
+
