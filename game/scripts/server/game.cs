@@ -240,6 +240,26 @@ function endGame()
 //-----------------------------------------------------------------------------
 // Physics Experimentation
 //-----------------------------------------------------------------------------
+function makeM4(%start)
+{
+   pdd(1);
+   $m4 = new PhysicsShape() {
+      playAmbient = "1";
+      dataBlock = "M4Physics";
+      position = %start;
+      rotation = "0 0 1 180";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = false;
+      isDynamic = false;
+   };
+}
+
 function looseBoxes(%start)
 {
    if (VectorLen(%start)==0.0)
@@ -337,6 +357,26 @@ function looseBoxes(%start)
    }; 
 }
 
+function makeBox(%start)
+{
+   if (VectorLen(%start)==0.0)
+      %start = "0 0 2";
+   %a = new PhysicsShape() {
+      playAmbient = "0";
+      dataBlock = "PSCube";
+      position = %start;
+      rotation = "1 0 0 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = false;
+      isDynamic = false;
+   };   
+}
 function makeBoxes(%start)
 {
    if (VectorLen(%start)==0.0)
@@ -361,7 +401,7 @@ function makeBoxes(%start)
    $sphericalB = new PhysicsShape() {
       playAmbient = "0";
       dataBlock = "PSCube";
-      position = VectorAdd(%start,"3 0 0");
+      position = VectorAdd(%start,"0 0 2");
       rotation = "1 0 0 0";
       canSave = "1";
       canSaveDynamicFields = "1";
@@ -373,7 +413,7 @@ function makeBoxes(%start)
       hasGravity = true;
       isDynamic = true;
    };
-   %a.jointAttach($sphericalB,4);//4 = spherical 
+   %a.jointAttach($sphericalB,3);//4 = spherical 
    ///////////////////////////////////////////////
    %a = new PhysicsShape() {
       playAmbient = "0";

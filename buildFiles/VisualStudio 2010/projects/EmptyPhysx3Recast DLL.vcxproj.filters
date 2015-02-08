@@ -2892,12 +2892,6 @@
     <ClCompile Include="..\..\..\..\..\Engine\source\console\SQLiteObject.cc">
       <Filter>Source Files\Engine\console</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Engine\source\T3D\physics\physicsArticulatedShape.cpp">
-      <Filter>Source Files\Engine\T3D\physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Engine\source\T3D\physics\physx3\px3ArticulatedShape.cpp">
-      <Filter>Source Files\Engine\T3D\physics\physx3</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\..\Engine\source\T3D\physics\physx3\px3Joint.cpp">
       <Filter>Source Files\Engine\T3D\physics\physx3</Filter>
     </ClCompile>
@@ -5464,12 +5458,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Engine\source\console\SQLiteObject.h">
       <Filter>Source Files\Engine\console</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Engine\source\T3D\physics\physicsArticulatedShape.h">
-      <Filter>Source Files\Engine\T3D\physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Engine\source\T3D\physics\physx3\px3ArticulatedShape.h">
-      <Filter>Source Files\Engine\T3D\physics\physx3</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Engine\source\T3D\physics\physx3\px3Joint.h">
       <Filter>Source Files\Engine\T3D\physics\physx3</Filter>
