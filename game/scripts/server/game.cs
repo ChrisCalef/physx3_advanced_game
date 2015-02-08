@@ -256,7 +256,7 @@ function makeM4(%start)
       minDamageAmount = "0";
       radiusDamage = "0";
       hasGravity = false;
-      isDynamic = false;
+      isDynamic = true;
    };
 }
 
