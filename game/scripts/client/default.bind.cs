@@ -481,3 +481,8 @@ GlobalActionMap.bind(keyboard, "ctrl F3", doProfile);
 GlobalActionMap.bind(keyboard, "tilde", toggleConsole);
 GlobalActionMap.bindCmd(keyboard, "alt k", "cls();","");
 GlobalActionMap.bindCmd(keyboard, "alt enter", "", "Canvas.attemptFullscreenToggle();");
+
+///////// TEMP, physx3 demo ////////////////////
+GlobalActionMap.bindCmd(keyboard, "alt g", "$m4.aitp(2,\"0 0 0\",\"0 0 1500\");","");
+GlobalActionMap.bindCmd(keyboard, "alt d", "pdd(0);","");
+//GlobalActionMap.bindCmd(keyboard, "alt g", "echo($m4.getclassname());","");

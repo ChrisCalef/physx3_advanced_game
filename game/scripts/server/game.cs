@@ -240,6 +240,7 @@ function endGame()
 //-----------------------------------------------------------------------------
 function makeM4(%start)
 {
+   %start = "0 0 0";
    pdd(1);//physics debug draw
    $m4 = new PhysicsShape() {
       playAmbient = "1";
@@ -253,7 +254,7 @@ function makeM4(%start)
       invulnerable = "0";
       minDamageAmount = "0";
       radiusDamage = "0";
-      hasGravity = false;
+      hasGravity = true;
       isDynamic = true;
    };
    MissionGroup.add($m4);

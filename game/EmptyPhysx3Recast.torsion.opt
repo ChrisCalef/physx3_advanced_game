@@ -6,10 +6,10 @@
 <Breakpoints/>
 <Bookmarks/>
 <OpenFiles>
-<File ScrollX="0" ScrollY="27">levels\Empty Room.mis</File>
+<File ScrollX="0" ScrollY="99">levels\Empty Room.mis</File>
 <File ScrollX="0" ScrollY="0">art\datablocks\datablockExec.cs</File>
-<File ScrollX="0" ScrollY="20">art\datablocks\physicsShape.cs</File>
-<File ScrollX="0" ScrollY="227" Active="true">scripts\server\game.cs</File>
+<File ScrollX="0" ScrollY="52">art\datablocks\physicsShape.cs</File>
+<File ScrollX="0" ScrollY="229" Active="true">scripts\server\game.cs</File>
 <File ScrollX="0" ScrollY="0">art\shapes\m4_optimized\materials.cs</File>
 <File ScrollX="0" ScrollY="0">art\shapes\m4_optimized\M4.cs</File>
 <File ScrollX="0" ScrollY="0">tools\worldEditor\scripts\editors\worldEditor.ed.cs</File>
