@@ -240,9 +240,43 @@ function endGame()
 //-----------------------------------------------------------------------------
 function makeM4(%start)
 {
-   %start = "0 0 0";
-   pdd(1);//physics debug draw
+   %start = "-1 1 2";
+   //pdd(1);//physics debug draw
    $m4 = new PhysicsShape() {
+      playAmbient = "1";
+      dataBlock = "M4Physics";
+      position = %start;
+      rotation = "0 0 1 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   %start = "1 1 2";
+   MissionGroup.add($m4);   
+   $m5 = new PhysicsShape() {
+      playAmbient = "1";
+      dataBlock = "M4Physics";
+      position = %start;
+      rotation = "0 0 1 0";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = true;
+      isDynamic = true;
+   };
+   %start = "3 1 2";
+   MissionGroup.add($m4); 
+   $m6 = new PhysicsShape() {
       playAmbient = "1";
       dataBlock = "M4Physics";
       position = %start;

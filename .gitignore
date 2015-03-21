@@ -8,6 +8,9 @@ game/core/fonts/
 game/core/prefs.cs
 game/tools/settings.xml
 game/scripts/client/config.cs
+game/scripts/client/prefs.cs
+game/scripts/server/banlist.cs
+game/scripts/server/prefs.cs
 *.log
 *.db
 *.user

@@ -123,7 +123,7 @@ new SimGroup(MissionGroup) {
       enablePhysicsRep = "1";
       renderNormals = "0";
       forceDetail = "-1";
-      position = "-0.989225 8.91864 -1.28506";
+      position = "-7 7 -1";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       canSave = "1";
