@@ -140,7 +140,8 @@ function onServerCreated()
    $Game::StartTime = 0;
 
    // Create the server physics world.
-   physicsInitWorld( "server" );
+   physicsInitWorld( "server", $pref::Physics::gravity );
+   echo("initializing server physics world, gravity = " @  $pref::Physics::gravity );
    
    // Load up any objects or datablocks saved to the editor managed scripts
    %datablockFiles = new ArrayObject();
@@ -239,14 +240,20 @@ function endGame()
 // Physics Experimentation
 //-----------------------------------------------------------------------------
 function makeM4(%start)
-{
-   %start = "-1 1 2";
+{   
+   //physicsSetTimeScale(0.5);
    //pdd(1);//physics debug draw
+   
+   %dyn = true;
+   %grav = true;
+   %ambient = false;
+  
+   %start = "-3 3 2";
    $m4 = new PhysicsShape() {
-      playAmbient = "1";
+      playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 0";
+      rotation = "0 0 1 90";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -254,13 +261,14 @@ function makeM4(%start)
       invulnerable = "0";
       minDamageAmount = "0";
       radiusDamage = "0";
-      hasGravity = true;
-      isDynamic = true;
+      hasGravity = %grav;
+      isDynamic = %dyn;
    };
-   %start = "1 1 2";
-   MissionGroup.add($m4);   
+   MissionGroup.add($m4);  
+    
+   %start = "0 0 2";
    $m5 = new PhysicsShape() {
-      playAmbient = "1";
+      playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
       rotation = "0 0 1 0";
@@ -271,16 +279,17 @@ function makeM4(%start)
       invulnerable = "0";
       minDamageAmount = "0";
       radiusDamage = "0";
-      hasGravity = true;
-      isDynamic = true;
+      hasGravity = %grav;
+      isDynamic = %dyn;
    };
-   %start = "3 1 2";
-   MissionGroup.add($m4); 
+   MissionGroup.add($m5); 
+   
+   %start = "3 3 2";
    $m6 = new PhysicsShape() {
-      playAmbient = "1";
+      playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 0";
+      rotation = "0 0 1 270";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -288,10 +297,85 @@ function makeM4(%start)
       invulnerable = "0";
       minDamageAmount = "0";
       radiusDamage = "0";
-      hasGravity = true;
-      isDynamic = true;
+      hasGravity = %grav;
+      isDynamic = %dyn;
    };
-   MissionGroup.add($m4);
+   MissionGroup.add($m6);
+   
+   %start = "0 6 2";
+   $m7 = new PhysicsShape() {
+      playAmbient = %ambient;
+      dataBlock = "M4Physics";
+      position = %start;
+      rotation = "0 0 1 180";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = %grav;
+      isDynamic = %dyn;
+   };
+   MissionGroup.add($m7); 
+      /*
+   %start = "8 4 2";
+   $m8 = new PhysicsShape() {
+      playAmbient = %ambient;
+      dataBlock = "M4Physics";
+      position = %start;
+      rotation = "0 0 1 180";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = %grav;
+      isDynamic = %dyn;
+   };
+   MissionGroup.add($m8); 
+
+   
+   %start = "11 4 2";
+   $m9 = new PhysicsShape() {
+      playAmbient = %ambient;
+      dataBlock = "M4Physics";
+      position = %start;
+      rotation = "0 0 1 225";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = %grav;
+      isDynamic = %dyn;
+   };
+   MissionGroup.add($m9); 
+
+   
+   %start = "14 4 2";
+   $m0 = new PhysicsShape() {
+      playAmbient = %ambient;
+      dataBlock = "M4Physics";
+      position = %start;
+      rotation = "0 0 1 270";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      areaImpulse = "0";
+      damageRadius = "0";
+      invulnerable = "0";
+      minDamageAmount = "0";
+      radiusDamage = "0";
+      hasGravity = %grav;
+      isDynamic = %dyn;
+   };
+   MissionGroup.add($m0); 
+   */
 }
 
 function makeBoxS(%start)

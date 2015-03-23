@@ -484,5 +484,6 @@ GlobalActionMap.bindCmd(keyboard, "alt enter", "", "Canvas.attemptFullscreenTogg
 
 ///////// TEMP, physx3 demo ////////////////////
 GlobalActionMap.bindCmd(keyboard, "alt g", "$m4.aitp(2,\"0 0 0\",\"0 0 1500\");","");
-GlobalActionMap.bindCmd(keyboard, "alt d", "pdd(0);","");
+GlobalActionMap.bindCmd(keyboard, "alt d", "pdd(0);","");//todo - make this toggle
+GlobalActionMap.bindCmd(keyboard, "alt f", "makem4();","");
 //GlobalActionMap.bindCmd(keyboard, "alt g", "echo($m4.getclassname());","");

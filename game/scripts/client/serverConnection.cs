@@ -73,7 +73,7 @@ function GameConnection::onConnectionAccepted(%this)
 {
    // Startup the physX world on the client before any
    // datablocks and objects are ghosted over.
-   physicsInitWorld( "client" );   
+   physicsInitWorld( "client" , $pref::Physics::gravity );   
 }
 
 function GameConnection::onConnectionError(%this, %msg)
