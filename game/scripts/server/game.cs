@@ -242,13 +242,13 @@ function endGame()
 function makeM4(%start)
 {   
    //physicsSetTimeScale(0.5);
-   pdd(1);//physics debug draw
+   //pdd(1);//physics debug draw
    
    %dyn = true;
    %grav = true;
    %ambient = false;
   
-   %start = "-3 3 2";
+   %start = "-3 3 4";
    $m4 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
@@ -266,7 +266,7 @@ function makeM4(%start)
    };
    MissionGroup.add($m4);  
    
-   %start = "0 0 2";
+   %start = "0 0 4";
    $m5 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
@@ -284,7 +284,7 @@ function makeM4(%start)
    };
    MissionGroup.add($m5); 
    
-   %start = "3 3 2";
+   %start = "3 3 4";
    $m6 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
@@ -302,7 +302,7 @@ function makeM4(%start)
    };
    MissionGroup.add($m6);
    
-   %start = "0 6 2";
+   %start = "0 6 4";
    $m7 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
@@ -332,10 +332,10 @@ function m4D()
 
 function m4P()
 {
-   $m4.aitp(2,"-10 0 0");  
-   $m5.aitp(2,"0 -10 0");
-   $m6.aitp(2,"10 0 0");
-   $m7.aitp(2,"0 10 0");
+   $m4.aitp(2,"-100 0 0");  
+   $m5.aitp(2,"0 -100 0");
+   $m6.aitp(2,"100 0 0");
+   $m7.aitp(2,"0 100 0");
 }
 
 //Joint debugging, Chest Kinematic
