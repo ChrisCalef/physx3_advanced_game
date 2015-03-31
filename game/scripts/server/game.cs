@@ -242,7 +242,7 @@ function endGame()
 function makeM4(%start)
 {   
    //physicsSetTimeScale(0.5);
-   //pdd(1);//physics debug draw
+   pdd(1);//physics debug draw
    
    %dyn = true;
    %grav = true;
@@ -265,7 +265,7 @@ function makeM4(%start)
       isDynamic = %dyn;
    };
    MissionGroup.add($m4);  
-    
+   
    %start = "0 0 2";
    $m5 = new PhysicsShape() {
       playAmbient = %ambient;
@@ -319,64 +319,44 @@ function makeM4(%start)
       isDynamic = %dyn;
    };
    MissionGroup.add($m7); 
-      /*
-   %start = "8 4 2";
-   $m8 = new PhysicsShape() {
-      playAmbient = %ambient;
-      dataBlock = "M4Physics";
-      position = %start;
-      rotation = "0 0 1 180";
-      canSave = "1";
-      canSaveDynamicFields = "1";
-      areaImpulse = "0";
-      damageRadius = "0";
-      invulnerable = "0";
-      minDamageAmount = "0";
-      radiusDamage = "0";
-      hasGravity = %grav;
-      isDynamic = %dyn;
-   };
-   MissionGroup.add($m8); 
-
-   
-   %start = "11 4 2";
-   $m9 = new PhysicsShape() {
-      playAmbient = %ambient;
-      dataBlock = "M4Physics";
-      position = %start;
-      rotation = "0 0 1 225";
-      canSave = "1";
-      canSaveDynamicFields = "1";
-      areaImpulse = "0";
-      damageRadius = "0";
-      invulnerable = "0";
-      minDamageAmount = "0";
-      radiusDamage = "0";
-      hasGravity = %grav;
-      isDynamic = %dyn;
-   };
-   MissionGroup.add($m9); 
-
-   
-   %start = "14 4 2";
-   $m0 = new PhysicsShape() {
-      playAmbient = %ambient;
-      dataBlock = "M4Physics";
-      position = %start;
-      rotation = "0 0 1 270";
-      canSave = "1";
-      canSaveDynamicFields = "1";
-      areaImpulse = "0";
-      damageRadius = "0";
-      invulnerable = "0";
-      minDamageAmount = "0";
-      radiusDamage = "0";
-      hasGravity = %grav;
-      isDynamic = %dyn;
-   };
-   MissionGroup.add($m0); 
-   */
+  
 }
+
+function m4D()
+{
+   $m4.setDynamic(1);  
+   $m5.setDynamic(1);  
+   $m6.setDynamic(1); 
+   $m7.setDynamic(1); 
+}
+
+function m4P()
+{
+   $m4.aitp(2,"-10 0 0");  
+   $m5.aitp(2,"0 -10 0");
+   $m6.aitp(2,"10 0 0");
+   $m7.aitp(2,"0 10 0");
+}
+
+//Joint debugging, Chest Kinematic
+function m4CK()
+{
+   
+   $m4.setPartDynamic(2,0);
+   $m5.setPartDynamic(2,0);
+   $m6.setPartDynamic(2,0);
+   $m7.setPartDynamic(2,0);
+}
+
+
+
+
+
+
+
+
+
+
 
 function makeBoxS(%start)
 {

@@ -44,7 +44,7 @@ datablock PhysicsShapeData( M4Physics )
    isArticulated = true;        //Tells us to look for an array of bodyparts instead of one body. 
    shapeID = 1;        //ID into the physicsShape table in the database.
 
-   mass = "20";
+   mass = "1";        
    massCenter = "0 0 0";      // Center of mass for rigid body
    massBox = "1 1 1";         // Size of box used for moment of inertia,
                               // if zero it defaults to object bounding box

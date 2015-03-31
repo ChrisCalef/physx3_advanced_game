@@ -385,7 +385,7 @@ function toggleCamera(%val)
 
 moveMap.bind( keyboard, z, toggleFreeLook );
 moveMap.bind(keyboard, tab, toggleFirstPerson );
-moveMap.bind(keyboard, "alt c", toggleCamera);
+//moveMap.bind(keyboard, "alt c", toggleCamera);
 
 moveMap.bind( gamepad, btn_back, toggleCamera );
 
@@ -483,7 +483,11 @@ GlobalActionMap.bindCmd(keyboard, "alt k", "cls();","");
 GlobalActionMap.bindCmd(keyboard, "alt enter", "", "Canvas.attemptFullscreenToggle();");
 
 ///////// TEMP, physx3 demo ////////////////////
-GlobalActionMap.bindCmd(keyboard, "alt g", "$m4.aitp(2,\"0 0 0\",\"0 0 1500\");","");
+//GlobalActionMap.bindCmd(keyboard, "alt b", "$m4.aitp(15,\"2 0 0\");$m4.aitp(18,\"-2 0 0\");","");
+GlobalActionMap.bindCmd(keyboard, "alt b", "m4P();","");
+//GlobalActionMap.bindCmd(keyboard, "alt g", "m4D();","");
+GlobalActionMap.bindCmd(keyboard, "alt g", "m4CK();","");
 GlobalActionMap.bindCmd(keyboard, "alt d", "pdd(0);","");//todo - make this toggle
+GlobalActionMap.bindCmd(keyboard, "alt c", "pdd(1);","");//todo - make this toggle
 GlobalActionMap.bindCmd(keyboard, "alt f", "makem4();","");
 //GlobalActionMap.bindCmd(keyboard, "alt g", "echo($m4.getclassname());","");

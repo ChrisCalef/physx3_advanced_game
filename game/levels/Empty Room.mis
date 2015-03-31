@@ -109,7 +109,7 @@ new SimGroup(MissionGroup) {
    };
    new TSStatic() {
       shapeName = "art/shapes/physx3/tower.dae";
-      position = "-10 10 -1";
+      position = "-40 40 -1";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       playAmbient = "1";
