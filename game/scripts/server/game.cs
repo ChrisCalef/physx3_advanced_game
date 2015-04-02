@@ -242,18 +242,18 @@ function endGame()
 function makeM4(%start)
 {   
    //physicsSetTimeScale(0.5);
-   //pdd(1);//physics debug draw
+   pdd(1);//physics debug draw
    
-   %dyn = true;
+   %dyn = false;
    %grav = true;
-   %ambient = false;
+   %ambient = true;
   
-   %start = "-3 3 4";
+   %start = "-3 3 1";
    $m4 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 90";
+      rotation = "0 0 1 110";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -266,12 +266,12 @@ function makeM4(%start)
    };
    MissionGroup.add($m4);  
    
-   %start = "0 0 4";
+   %start = "0 1 1";
    $m5 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 0";
+      rotation = "0 0 1 170";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -284,12 +284,12 @@ function makeM4(%start)
    };
    MissionGroup.add($m5); 
    
-   %start = "3 3 4";
+   %start = "3 3 1";
    $m6 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 270";
+      rotation = "0 0 1 290";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -302,12 +302,12 @@ function makeM4(%start)
    };
    MissionGroup.add($m6);
    
-   %start = "0 6 4";
+   %start = "0 6 1";
    $m7 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 180";
+      rotation = "0 0 1 30";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -332,10 +332,10 @@ function m4D()
 
 function m4P()
 {
-   $m4.aitp(2,"-100 0 0");  
-   $m5.aitp(2,"0 -100 0");
-   $m6.aitp(2,"100 0 0");
-   $m7.aitp(2,"0 100 0");
+   $m4.aitp(2,"-60 0 0");  
+   $m5.aitp(2,"0 -60 0");
+   $m6.aitp(2,"60 0 0");
+   $m7.aitp(2,"0 60 0");
 }
 
 //Joint debugging, Chest Kinematic
