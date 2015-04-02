@@ -44,12 +44,12 @@ datablock PhysicsShapeData( M4Physics )
    isArticulated = true;        //Tells us to look for an array of bodyparts instead of one body. 
    shapeID = 1;        //ID into the physicsShape table in the database.
 
-   mass = "1";        
+   mass = "1";                // This is mass for every bodypart, which is wrong, need physx to calculate mass based on density.
    massCenter = "0 0 0";      // Center of mass for rigid body
    massBox = "1 1 1";         // Size of box used for moment of inertia,
                               // if zero it defaults to object bounding box
    drag = 0.2;                // Drag coefficient
-   bodyFriction = 0.2;
+   bodyFriction = 0.8;
    bodyRestitution = 0.1;
    minImpactSpeed = 5;        // Impacts over this invoke the script callback
    softImpactSpeed = 5;       // Play SoftImpact Sound

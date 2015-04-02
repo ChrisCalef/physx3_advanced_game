@@ -242,18 +242,18 @@ function endGame()
 function makeM4(%start)
 {   
    //physicsSetTimeScale(0.5);
-   pdd(1);//physics debug draw
+   //pdd(1);//physics debug draw
    
    %dyn = false;
    %grav = true;
    %ambient = true;
   
-   %start = "-3 3 1";
+   %start = "-3 3 0.1";
    $m4 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 110";
+      rotation = "0 0 1 90";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -266,12 +266,12 @@ function makeM4(%start)
    };
    MissionGroup.add($m4);  
    
-   %start = "0 1 1";
+   %start = "0 1 0.1";
    $m5 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 170";
+      rotation = "0 0 1 0";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -284,12 +284,12 @@ function makeM4(%start)
    };
    MissionGroup.add($m5); 
    
-   %start = "3 3 1";
+   %start = "3 3 0.1";
    $m6 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 290";
+      rotation = "0 0 1 270";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -302,12 +302,12 @@ function makeM4(%start)
    };
    MissionGroup.add($m6);
    
-   %start = "0 6 1";
+   %start = "0 6 0.1";
    $m7 = new PhysicsShape() {
       playAmbient = %ambient;
       dataBlock = "M4Physics";
       position = %start;
-      rotation = "0 0 1 30";
+      rotation = "0 0 1 180";
       canSave = "1";
       canSaveDynamicFields = "1";
       areaImpulse = "0";
@@ -328,14 +328,24 @@ function m4D()
    $m5.setDynamic(1);  
    $m6.setDynamic(1); 
    $m7.setDynamic(1); 
+   
+   $m4.aitp(2,"0 0 0");  
+   $m5.aitp(2,"0 0 0");
+   $m6.aitp(2,"0 0 0");
+   $m7.aitp(2,"0 0 0");
 }
 
 function m4P()
 {
-   $m4.aitp(2,"-60 0 0");  
-   $m5.aitp(2,"0 -60 0");
-   $m6.aitp(2,"60 0 0");
-   $m7.aitp(2,"0 60 0");
+   $m4.setDynamic(1);  
+   $m5.setDynamic(1);  
+   $m6.setDynamic(1); 
+   $m7.setDynamic(1); 
+   
+   $m4.aitp(2,"-30 0 30");  
+   $m5.aitp(2,"0 -30 30");
+   $m6.aitp(2,"30 0 30");
+   $m7.aitp(2,"0 30 30");
 }
 
 //Joint debugging, Chest Kinematic
